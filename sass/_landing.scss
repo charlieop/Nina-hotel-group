@@ -1,0 +1,143 @@
+section.landing {
+  position: relative;
+  video {
+    width: 100%;
+    height: 720px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 264px;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.76) 0px,
+      rgba(0, 0, 0, 0.33) 71.07%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 367px;
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.76) 0px,
+      rgba(0, 0, 0, 0.33) 71.07%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .control-pause {
+    position: absolute;
+    right: var(--padding-inline);
+    bottom: 2rem;
+
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    z-index: 1;
+  }
+  .control-pause input,
+  .play {
+    display: none;
+  }
+  .control-pause input:checked ~ .play {
+    display: block;
+  }
+  .control-pause input:checked ~ .pause {
+    display: none;
+  }
+
+  .landing-nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 5rem;
+    z-index: 1;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: var(--padding-inline);
+
+      li a {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        place-items: center;
+        gap: var(--fs-300);
+
+        font-size: var(--fs-300);
+
+        svg {
+          height: 2.875rem;
+          width: 2.875rem;
+        }
+
+        &:hover {
+          svg * {
+            fill: var(--clr-landing-hover);
+          }
+          color: var(--clr-landing-hover);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    video {
+      height: 640px;
+    }
+  }
+  @media (max-width: 991px) {
+    .landing-nav {
+      position: fixed;
+      bottom: 0;
+      background: var(--clr-white);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px -1px 4px 0px;
+
+      svg * {
+        fill: #616161;
+      }
+      color: #616161;
+
+      ul {
+        padding-inline: 0;
+        gap: 0rem;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        li {
+          flex-shrink: 0;
+          padding: 1rem 1.625rem;
+
+          a {
+            font-size: var(--fs-200);
+
+            &:hover {
+              svg * {
+                fill: #616161;
+              }
+              text-decoration: underline;
+              color: #616161;
+              filter: brightness(0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}

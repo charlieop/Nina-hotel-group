@@ -1,0 +1,35 @@
+/* Gloal Colors */
+:root {
+  --clr-text: #ffffff;
+  --clr-primary: #a17c5b;
+
+  --clr-accent: #0f4643;
+  --clr-accent-transparent: #0f464340;
+  --clr-landing-hover: #c2dfe9;
+
+  --clr-lightblue: #829fa9;
+  --clr-offwhite: #ddcabc;
+  --clr-white: #ffffff;
+}
+
+/* Global Settings */
+:root {
+  --padding-inline: 6rem;
+
+  --transition: all 0.2s ease-in-out;
+}
+
+body {
+  color: var(--clr-text);
+}
+
+@media (max-width: 991px) {
+  :root {
+    --padding-inline: 3.125rem;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --padding-inline: 3.5625rem;
+  }
+}
