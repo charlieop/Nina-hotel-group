@@ -207,6 +207,17 @@ header {
     pointer-events: none;
     transition: opacity 0.7s ease-in-out;
   }
+  #page-prevent-click {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    display: none;
+  }
+
+  button.close {
+    background: none;
+    border: none;
+  }
 
   .links-panel {
     position: fixed;
@@ -229,6 +240,12 @@ header {
     border-radius: 0.5rem 0 0.5rem 0;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+
+    button.close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+    }
   }
   @media (max-width: 991px) {
     .booking-panel {
@@ -242,6 +259,9 @@ header:has(.cta-wrapper input:checked) {
   .page-overlay-bg {
     opacity: 1;
   }
+  #page-prevent-click {
+    display: block;
+  }
   .booking-panel {
     transform: translate(0);
   }
@@ -250,6 +270,9 @@ header:has(.cta-wrapper input:checked) {
 header:has(.hamburger-wrapper input:checked) {
   .page-overlay-bg {
     opacity: 1;
+  }
+  #page-prevent-click {
+    display: block;
   }
   .links-panel {
     transform: translate(0);

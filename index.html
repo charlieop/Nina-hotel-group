@@ -36,7 +36,7 @@
                   fill="white"
                 />
               </svg>
-              <input type="checkbox" />
+              <input type="checkbox" id="if-links-open" />
             </label>
           </li>
           <li class="logo">
@@ -150,14 +150,87 @@
           <li class="cta-wrapper">
             <label class="cta"
               >Book now
-              <input type="checkbox" />
+              <input type="checkbox" id="if-booking-open" />
             </label>
           </li>
         </ul>
       </nav>
       <div class="page-overlay-bg"></div>
-      <div class="links-panel"></div>
-      <div class="booking-panel"></div>
+      <div id="page-prevent-click"></div>
+      <div class="links-panel">
+        <button class="close" id="close-links">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="34px"
+            height="34px"
+            viewBox="0 0 34 34"
+            version="1.1"
+          >
+            <g
+              id="Components"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                id="Group"
+                fill="#000000"
+                transform="translate(3.000000, 5.000000)"
+              >
+                <path
+                  d="M-3.10209084,11.9225055 L30.1059732,12.3674369 C30.3768736,12.3710665 30.5956002,12.5897931 30.5992298,12.8606935 L30.6087445,13.5708408 C30.612444,13.8469584 30.3916055,14.073795 30.1154879,14.0774945 C30.1110224,14.0775543 30.1065563,14.0775543 30.1020908,14.0774945 L-3.10597317,13.6325631 C-3.37687359,13.6289335 -3.59560015,13.4102069 -3.59922975,13.1393065 L-3.60874452,12.4291592 C-3.61244402,12.1530416 -3.39160553,11.926205 -3.11548794,11.9225055 C-3.11102244,11.9224457 -3.10655634,11.9224457 -3.10209084,11.9225055 Z"
+                  id="Rectangle"
+                  transform="translate(13.500000, 13.000000) rotate(45.000000) translate(-13.500000, -13.000000) "
+                />
+                <path
+                  d="M-3.10209084,11.9225055 L30.1059732,12.3674369 C30.3768736,12.3710665 30.5956002,12.5897931 30.5992298,12.8606935 L30.6087445,13.5708408 C30.612444,13.8469584 30.3916055,14.073795 30.1154879,14.0774945 C30.1110224,14.0775543 30.1065563,14.0775543 30.1020908,14.0774945 L-3.10597317,13.6325631 C-3.37687359,13.6289335 -3.59560015,13.4102069 -3.59922975,13.1393065 L-3.60874452,12.4291592 C-3.61244402,12.1530416 -3.39160553,11.926205 -3.11548794,11.9225055 C-3.11102244,11.9224457 -3.10655634,11.9224457 -3.10209084,11.9225055 Z"
+                  id="Rectangle-Copy"
+                  transform="translate(13.500000, 13.000000) scale(-1, 1) rotate(45.000000) translate(-13.500000, -13.000000) "
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="booking-panel">
+        <button class="close" id="close-booking">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="34px"
+            height="34px"
+            viewBox="0 0 34 34"
+            version="1.1"
+          >
+            <g
+              id="Components"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                id="Group"
+                fill="#000000"
+                transform="translate(3.000000, 5.000000)"
+              >
+                <path
+                  d="M-3.10209084,11.9225055 L30.1059732,12.3674369 C30.3768736,12.3710665 30.5956002,12.5897931 30.5992298,12.8606935 L30.6087445,13.5708408 C30.612444,13.8469584 30.3916055,14.073795 30.1154879,14.0774945 C30.1110224,14.0775543 30.1065563,14.0775543 30.1020908,14.0774945 L-3.10597317,13.6325631 C-3.37687359,13.6289335 -3.59560015,13.4102069 -3.59922975,13.1393065 L-3.60874452,12.4291592 C-3.61244402,12.1530416 -3.39160553,11.926205 -3.11548794,11.9225055 C-3.11102244,11.9224457 -3.10655634,11.9224457 -3.10209084,11.9225055 Z"
+                  id="Rectangle"
+                  transform="translate(13.500000, 13.000000) rotate(45.000000) translate(-13.500000, -13.000000) "
+                />
+                <path
+                  d="M-3.10209084,11.9225055 L30.1059732,12.3674369 C30.3768736,12.3710665 30.5956002,12.5897931 30.5992298,12.8606935 L30.6087445,13.5708408 C30.612444,13.8469584 30.3916055,14.073795 30.1154879,14.0774945 C30.1110224,14.0775543 30.1065563,14.0775543 30.1020908,14.0774945 L-3.10597317,13.6325631 C-3.37687359,13.6289335 -3.59560015,13.4102069 -3.59922975,13.1393065 L-3.60874452,12.4291592 C-3.61244402,12.1530416 -3.39160553,11.926205 -3.11548794,11.9225055 C-3.11102244,11.9224457 -3.10655634,11.9224457 -3.10209084,11.9225055 Z"
+                  id="Rectangle-Copy"
+                  transform="translate(13.500000, 13.000000) scale(-1, 1) rotate(45.000000) translate(-13.500000, -13.000000) "
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
     </header>
     <main>
       <section class="landing">
@@ -169,7 +242,7 @@
         ></video>
         <button type="button" class="control-pause">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" id="if-play" />
             <svg
               class="pause"
               xmlns="http://www.w3.org/2000/svg"
@@ -644,7 +717,7 @@
           </div>
           <ul class="scroller">
             <li class="img-card">
-              <img src="assets/imgs/rooms/room1.jpg" alt="" />
+              <img data-src="assets/imgs/rooms/room1.jpg" alt="" />
               <div class="content">
                 <h3>
                   <p>Nina Hotel</p>
@@ -660,7 +733,7 @@
               </div>
             </li>
             <li class="img-card">
-              <img src="assets/imgs/rooms/room2.jpg" alt="" />
+              <img data-src="assets/imgs/rooms/room2.jpg" alt="" />
               <div class="content">
                 <h3>
                   <p>Nina Hotel</p>
@@ -676,7 +749,7 @@
               </div>
             </li>
             <li class="img-card">
-              <img src="assets/imgs/rooms/room3.jpg" alt="" />
+              <img data-src="assets/imgs/rooms/room3.jpg" alt="" />
               <div class="content">
                 <h3>
                   <p>Nina Hotel</p>
@@ -691,7 +764,7 @@
               </div>
             </li>
             <li class="img-card">
-              <img src="assets/imgs/rooms/room4.jpg" alt="" />
+              <img data-src="assets/imgs/rooms/room4.jpg" alt="" />
               <div class="content">
                 <h3>
                   <p>Nina Hotel</p>
@@ -706,7 +779,7 @@
               </div>
             </li>
             <li class="img-card">
-              <img src="assets/imgs/rooms/room5.jpg" alt="" />
+              <img data-src="assets/imgs/rooms/room5.jpg" alt="" />
               <div class="content">
                 <h3>
                   <p>Londgewood</p>
@@ -721,7 +794,7 @@
               </div>
             </li>
             <li class="img-card">
-              <img src="assets/imgs/rooms/room6.jpg" alt="" />
+              <img data-src="assets/imgs/rooms/room6.jpg" alt="" />
               <div class="content">
                 <h3>
                   <p>Londgewood</p>
@@ -737,7 +810,7 @@
               </div>
             </li>
             <li class="img-card">
-              <img src="assets/imgs/rooms/room7.jpg" alt="" />
+              <img data-src="assets/imgs/rooms/room7.jpg" alt="" />
               <div class="content">
                 <h3>
                   <p>The Lily</p>
@@ -769,7 +842,7 @@
         <div class="gallery">
           <div class="group">
             <div class="img-card highlight">
-              <img src="assets/imgs/restaurants/food1.jpg" alt="" />
+              <img data-src="assets/imgs/restaurants/food1.jpg" alt="" />
               <div class="content">
                 <h3>I-O-N</h3>
                 <p class="desc">Wong Chuk Hang</p>
@@ -778,14 +851,14 @@
           </div>
           <div class="group">
             <div class="img-card">
-              <img src="assets/imgs/restaurants/food2.jpg" alt="" />
+              <img data-src="assets/imgs/restaurants/food2.jpg" alt="" />
               <div class="content">
                 <h3>Café Circles</h3>
                 <p class="desc">Nina Hotel Tsuen Wan West</p>
               </div>
             </div>
             <div class="img-card">
-              <img src="assets/imgs/restaurants/food3.jpg" alt="" />
+              <img data-src="assets/imgs/restaurants/food3.jpg" alt="" />
               <div class="content">
                 <h3>Ah Yung Kitchen</h3>
                 <p class="desc">Nina Hotel Causeway Bay</p>
@@ -794,14 +867,14 @@
           </div>
           <div class="group">
             <div class="img-card">
-              <img src="assets/imgs/restaurants/food4.jpg" alt="" />
+              <img data-src="assets/imgs/restaurants/food4.jpg" alt="" />
               <div class="content">
                 <h3>I-O-N</h3>
                 <p class="desc">Kwun Tong</p>
               </div>
             </div>
             <div class="img-card">
-              <img src="assets/imgs/restaurants/food5.jpg" alt="" />
+              <img data-src="assets/imgs/restaurants/food5.jpg" alt="" />
               <div class="content">
                 <h3>RÚ</h3>
                 <p class="desc">Nina Hotel Tsuen Wan West</p>
@@ -811,7 +884,7 @@
         </div>
       </section>
       <section class="banner">
-        <img src="assets/imgs/banner/banner-bg1.jpg" alt="" />
+        <img data-src="assets/imgs/banner/banner-bg1.jpg" alt="" />
         <div class="content">
           <h2>Ring in the Year of the Snake</h2>
           <p class="desc">
@@ -825,7 +898,7 @@
         <h2>Exciting Offers</h2>
         <div class="gallary">
           <div class="img-card">
-            <img src="assets/imgs/offers/offer1.jpg" alt="" />
+            <img data-src="assets/imgs/offers/offer1.jpg" alt="" />
             <div class="content">
               <p class="tag">Gift</p>
               <h3>Your Stylish Travel Companions</h3>
@@ -842,7 +915,7 @@
             </div>
           </div>
           <div class="img-card">
-            <img src="assets/imgs/offers/offer2.jpg" alt="" />
+            <img data-src="assets/imgs/offers/offer2.jpg" alt="" />
             <div class="content">
               <p class="tag">Accommodation</p>
               <h3>Stay Longer Pay Less</h3>
@@ -854,7 +927,7 @@
             </div>
           </div>
           <div class="img-card">
-            <img src="assets/imgs/offers/offer3.jpg" alt="" />
+            <img data-src="assets/imgs/offers/offer3.jpg" alt="" />
             <div class="content">
               <p class="tag">Dining</p>
               <h3>I-O-N Wong Chuk Hang Dinner &amp; Weekend Lunch Buffet</h3>
@@ -870,7 +943,7 @@
         </div>
       </section>
       <section class="banner">
-        <img src="assets/imgs/banner/banner-bg2.jpg" alt="" />
+        <img data-src="assets/imgs/banner/banner-bg2.jpg" alt="" />
         <div class="content">
           <h2>"HOTEL CHEF SECRETS" COOKBOOK</h2>
           <p class="desc">
@@ -961,7 +1034,7 @@
           </ul>
         </li>
         <li class="button">
-          <button type="button">
+          <button type="button" id="scroll-to-top">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"

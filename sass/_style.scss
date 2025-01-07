@@ -34,3 +34,20 @@ body {
     --padding-inline: 3.5625rem;
   }
 }
+
+.lazy-img {
+  background: linear-gradient(
+      90deg,
+      #0001 33%,
+      rgba(0, 0, 0, 0.168) 50%,
+      #0001 66%
+    )
+    #f2f2f2;
+  background-size: 300% 100%;
+  animation: l1 1s infinite linear;
+}
+@keyframes l1 {
+  0% {
+    background-position: right;
+  }
+}

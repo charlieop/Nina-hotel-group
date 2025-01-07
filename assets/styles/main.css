@@ -143,6 +143,17 @@ body {
     --padding-inline: 3.5625rem;
   }
 }
+.lazy-img {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.0666666667) 33%, rgba(0, 0, 0, 0.168) 50%, rgba(0, 0, 0, 0.0666666667) 66%) #f2f2f2;
+  background-size: 300% 100%;
+  animation: l1 1s infinite linear;
+}
+
+@keyframes l1 {
+  0% {
+    background-position: right;
+  }
+}
 header {
   position: fixed;
   top: 0;
@@ -312,6 +323,16 @@ header .page-overlay-bg {
   pointer-events: none;
   transition: opacity 0.7s ease-in-out;
 }
+header #page-prevent-click {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  display: none;
+}
+header button.close {
+  background: none;
+  border: none;
+}
 header .links-panel {
   position: fixed;
   top: 0;
@@ -333,6 +354,11 @@ header .booking-panel {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 }
+header .booking-panel button.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
 @media (max-width: 991px) {
   header .booking-panel {
     width: 100%;
@@ -343,12 +369,18 @@ header .booking-panel {
 header:has(.cta-wrapper input:checked) .page-overlay-bg {
   opacity: 1;
 }
+header:has(.cta-wrapper input:checked) #page-prevent-click {
+  display: block;
+}
 header:has(.cta-wrapper input:checked) .booking-panel {
   transform: translate(0);
 }
 
 header:has(.hamburger-wrapper input:checked) .page-overlay-bg {
   opacity: 1;
+}
+header:has(.hamburger-wrapper input:checked) #page-prevent-click {
+  display: block;
 }
 header:has(.hamburger-wrapper input:checked) .links-panel {
   transform: translate(0);
