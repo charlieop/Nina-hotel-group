@@ -689,7 +689,7 @@ section.landing .landing-nav ul li a:hover svg * {
   }
 }
 .hotel-introduction {
-  background: url("/assets/imgs/global-hotel-bg.svg") no-repeat center center;
+  background: url("/Nina-hotel-group/assets/imgs/global-hotel-bg.svg") no-repeat center center;
   background-size: cover;
 }
 .hotel-introduction .introduction {
