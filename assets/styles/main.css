@@ -386,6 +386,183 @@ header:has(.hamburger-wrapper input:checked) .links-panel {
   transform: translate(0);
 }
 
+.booking-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+  font-size: var(--fs-300);
+}
+.booking-panel .form-wrapper {
+  width: 18.75rem;
+}
+.booking-panel .value {
+  color: var(--clr-accent);
+  font-size: var(--fs-300);
+  font-weight: 500;
+}
+.booking-panel .form-group {
+  margin-bottom: 0.5rem;
+}
+.booking-panel .form-group label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.booking-panel .form-group .input {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 3.375rem;
+  padding: 0.5rem;
+  border: 1px solid #ddcabc;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding-inline: 1.1rem;
+}
+.booking-panel .form-group .input .value {
+  font-size: var(--fs-250);
+  font-weight: 400;
+}
+.booking-panel .form-group #choose-hotel {
+  background: var(--clr-white);
+}
+.booking-panel .form-group #choose-hotel ul {
+  display: none;
+  position: absolute;
+  left: 2%;
+  bottom: -0.5rem;
+  width: 96%;
+  translate: 0 100%;
+  z-index: 1;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  background: var(--clr-white);
+  flex-direction: column;
+  padding: 0.75rem 1.25rem;
+  font-size: var(--fs-300);
+}
+.booking-panel .form-group #choose-hotel ul.open {
+  display: flex;
+}
+.booking-panel .form-group #choose-hotel li {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid #ddcabc;
+}
+.booking-panel .form-group #choose-hotel li.selected {
+  color: var(--clr-accent);
+}
+.booking-panel .form-group--number {
+  display: flex;
+  padding-block: 0.625rem;
+  gap: 0.75rem;
+  align-items: center;
+}
+.booking-panel .form-group--number button {
+  background: none;
+  border: none;
+  font-size: var(--fs-500);
+  font-family: monospace;
+  font-weight: 100;
+  color: var(--clr-primary);
+}
+.booking-panel .form-group--number label {
+  margin-right: auto;
+}
+.booking-panel .form-group--number.line {
+  border-bottom: 1px solid #ddcabc;
+}
+.booking-panel button[type=submit] {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 0.25rem;
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.date-selector {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  background: var(--clr-white);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  top: 100%;
+  margin-top: 0.5rem;
+}
+.date-selector.open {
+  display: block;
+}
+.date-selector input {
+  display: none;
+}
+.date-selector .month-picker {
+  height: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--clr-accent-transparent);
+}
+.date-selector .month-picker .month {
+  font-weight: 500;
+}
+.date-selector .month-picker button {
+  height: 100%;
+  padding: 0.5rem 2rem;
+  background: var(--clr-white);
+  border: none;
+  transition: var(--transition);
+}
+.date-selector .month-picker button:hover {
+  filter: brightness(0.9);
+}
+.date-selector .date-picker {
+  padding: 1rem;
+  text-align: center;
+}
+.date-selector .date-picker > * {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  place-items: center;
+}
+.date-selector .date-picker .date-name {
+  font-weight: 500;
+  margin-block: 0 1rem;
+  color: var(--clr-accent-transparent);
+}
+.date-selector .date-picker .date li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-white);
+  width: 2.25rem;
+  height: 2.25rem;
+  cursor: pointer;
+  border-radius: 999rem;
+  transition: filter 0.2s ease;
+}
+.date-selector .date-picker .date li:not(.placeholder):hover {
+  filter: brightness(0.9);
+}
+.date-selector .date-picker .date li.selected {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+.date-selector .date-picker .date .date-item.hide,
+.date-selector .date-picker .date .placeholder.hide {
+  display: none;
+}
+
 section.landing {
   position: relative;
 }
