@@ -13,7 +13,7 @@
   <body>
     <header>
       <nav class="primary-nav">
-        <ul>
+        <ul class="nav-list">
           <li class="hamburger-wrapper">
             <label type="button" class="hamburger">
               <svg
@@ -76,10 +76,35 @@
               <span>Nina Hospitality</span></a
             >
           </li>
-          <li class="link"><a href="">Our Locations</a></li>
           <li class="link">
-            <a href=""
-              ><svg
+            Our Locations
+              <span class="opened"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M10.4004 4.79999L5.94653 8.79999L1.60039 4.79999"
+                    stroke="white"
+                  /></svg></span
+            >
+            <ul class="expand-tabs" id="location-tabs">
+              <h3>Hotels &amp; Residences</h3>
+
+              <li>Nina Hotel Tsuen Wan West</li>
+              <li>Nina Hotel Island South</li>
+              <li>Nina Hotel Causeway Bay</li>
+              <li>Nina Hotel Kowloon East</li>
+              <li>Lodgewood Ming Kok</li>
+              <li>Lodgewood Wan Chai</li>
+              <li>The Lily</li>
+            </ul>
+          </li>
+          <li class="link">
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
                 height="14"
@@ -92,8 +117,25 @@
                   d="M7 0C3.14001 0 0 3.14001 0 7C0 10.86 3.14001 14 7 14C10.86 14 14 10.86 14 7C14.0007 3.14001 10.8607 0 7 0ZM7 12.8926C6.53823 12.8926 5.94732 12.0983 5.54111 10.695H8.45966C8.05345 12.0796 7.46182 12.8926 7.00005 12.8926H7ZM5.42999 10.3249C5.24529 9.54926 5.09738 8.60696 5.06058 7.55428H8.92057C8.88378 8.60696 8.75463 9.54929 8.55116 10.3249H5.42999ZM1.12689 7.55428H3.95308C3.98988 8.49658 4.10099 9.45694 4.2857 10.3249H2.14274C1.58862 9.51246 1.23725 8.57017 1.12686 7.55428H1.12689ZM7 1.10847C7.46177 1.10847 8.05268 1.90285 8.45888 3.3061H5.54108C5.94729 1.90276 6.5382 1.10847 6.99996 1.10847H7ZM8.55196 3.67546C8.73667 4.45107 8.88458 5.39337 8.92137 6.44605H5.06064C5.09744 5.39337 5.22659 4.45104 5.43005 3.67546H8.55196ZM3.9524 6.44605H1.12695C1.2193 5.43017 1.58872 4.46988 2.12407 3.67546H4.28495C4.10024 4.54415 3.98984 5.48573 3.95233 6.44605H3.9524ZM10.0296 7.55428H12.8558C12.7634 8.57017 12.394 9.53045 11.8587 10.3249H9.69706C9.88177 9.4569 9.99289 8.49658 10.0297 7.55428H10.0296ZM10.0296 6.44605C9.99281 5.50375 9.8817 4.54339 9.69699 3.67546H11.8579C12.412 4.46984 12.7626 5.43017 12.855 6.44605H10.0296ZM11.5808 3.30607H9.60467C9.41996 2.58602 9.1797 1.95757 8.88461 1.42225C9.95534 1.79167 10.8789 2.43814 11.581 3.30607H11.5808ZM5.09802 1.42225C4.8022 1.95761 4.56267 2.58605 4.37796 3.30607H2.41971C3.10297 2.4381 4.04455 1.79163 5.09795 1.42225H5.09802ZM2.41978 10.6943H4.39596C4.58066 11.4144 4.82093 12.0429 5.11602 12.5782C4.04457 12.2095 3.10309 11.5442 2.41967 10.6943H2.41978ZM9.60456 10.695H11.5807C10.8787 11.5442 9.95517 12.2095 8.88439 12.5788C9.18033 12.0435 9.41986 11.415 9.60456 10.695Z"
                   fill="white"
                 /></svg
-              ><span>EN</span></a
+              ><span>EN</span>
+              <span class="opened"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                >
+                  <path
+                    d="M10.4004 4.79999L5.94653 8.79999L1.60039 4.79999"
+                    stroke="white"
+                  /></svg></span
             >
+            <ul class="expand-tabs" id="language-tabs">
+              <li class="active">English</li>
+              <li>繁体中文</li>
+              <li>简体中文</li>
+            </ul>
           </li>
           <li class="link">
             <a href=""
@@ -758,7 +800,7 @@
         </nav>
       </section>
       <section class="hotel-introduction">
-        <img src="assets/imgs/global-hotel-bg.svg" alt="" class="bg">
+        <img src="assets/imgs/global-hotel-bg.svg" alt="" class="bg" />
         <div class="introduction">
           <h1>
             <p>Hotels &amp;</p>

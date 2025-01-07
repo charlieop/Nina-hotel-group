@@ -10,7 +10,37 @@ function init() {
   initPlusMinus();
   initDateSelect();
   initOpenCloseSelect();
+  initHeaderTabs();
 }
+function initHeaderTabs() {
+  const languageTabs = document.getElementById("language-tabs");
+  const locationTabs = document.getElementById("location-tabs");
+
+  const languageContainer = document.querySelector(".link:has(#language-tabs)");
+  const locationContainer = document.querySelector(".link:has(#location-tabs)");
+
+  document.addEventListener("click", (e) => {
+    if (
+      !languageContainer.contains(e.target) &&
+      !locationContainer.contains(e.target)
+    ) {
+      languageTabs.classList.remove("open");
+      locationTabs.classList.remove("open");
+      return;
+    }
+
+    if (languageContainer.contains(e.target)) {
+      languageTabs.classList.toggle("open");
+      locationTabs.classList.remove("open");
+    }
+
+    if (locationContainer.contains(e.target)) {
+      locationTabs.classList.toggle("open");
+      languageTabs.classList.remove("open");
+    }
+  });
+}
+
 function initOpenCloseSelect() {
   const bookPanel = document.querySelector(".booking-panel");
 
