@@ -1,0 +1,158 @@
+.restaurants {
+  .introduction {
+    padding-inline: var(--padding-inline);
+    text-align: center;
+    padding-block: 4.5rem 3.75rem;
+
+    h2 {
+      font-size: var(--fs-700);
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.3125;
+      color: var(--clr-primary);
+    }
+    p {
+      margin-top: 0.75rem;
+      max-width: none;
+      font-size: var(--fs-300);
+      font-weight: 300;
+      color: var(--clr-black);
+      line-height: 1.5;
+    }
+    .decor-line {
+      margin-top: 1.75rem;
+      width: 315px;
+      height: 2px;
+      background-color: var(--clr-primary);
+      margin-inline: auto;
+    }
+  }
+
+  .gallery {
+    --_gap: 0.75rem;
+    width: 100%;
+    padding-bottom: 4.375rem;
+    aspect-ratio: 7.03583062 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-areas: "group2 group1 group3";
+    gap: var(--_gap);
+    @for $i from 1 through 3 {
+      .group:nth-child(#{$i}) {
+        grid-area: group#{$i};
+        height: 100%;
+      }
+    }
+
+    .group:nth-child(2) {
+      display: grid;
+      grid-template-rows: 5fr 3fr;
+      gap: var(--_gap);
+    }
+    .group:nth-child(3) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: var(--_gap);
+    }
+
+    .img-card {
+      position: relative;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 93px;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.6) 57.66%,
+          rgba(0, 0, 0, 0.08) 100%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0.5rem 1.5rem;
+
+        color: var(--clr-white);
+        letter-spacing: 1.2px;
+
+        h3 {
+          font-size: var(--fs-500);
+        }
+        .desc {
+          font-size: var(--fs-100);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .introduction {
+      padding-block: 2.5rem 1.75rem;
+
+      h2 {
+        font-size: var(--fs-650);
+      }
+      .decor-line {
+        width: 72px;
+      }
+    }
+
+    .gallery {
+      padding-bottom: 3rem;
+
+      --_gap: 1.75rem;
+      grid-template-columns: 1fr;
+      grid-template-areas: "group1" "group2 " "group3";
+      aspect-ratio: unset;
+      @for $i from 1 through 3 {
+        .group:nth-child(#{$i}) {
+          grid-area: group#{$i};
+          height: 100%;
+        }
+      }
+      .group:nth-child(2),
+      .group:nth-child(3) {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        > * {
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .introduction {
+      h2 {
+        font-size: var(--fs-650);
+      }
+      p {
+        font-size: var(--fs-200);
+      }
+    }
+    .gallery {
+      --_gap: 1rem;
+      padding-bottom: rem;
+
+      .img-card {
+        .content {
+          height: 54px;
+          padding-block: 0.5rem;
+          h3 {
+            font-size: var(--fs-200);
+          }
+          .desc {
+            font-size: var(--fs-100);
+          }
+        }
+      }
+    }
+  }
+}

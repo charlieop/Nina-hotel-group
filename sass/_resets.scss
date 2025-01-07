@@ -43,10 +43,6 @@ video {
   object-position: center;
 }
 
-html {
-  hanging-punctuation: first last;
-}
-
 body {
   min-height: 100vh;
   min-height: 100svh;
@@ -62,8 +58,11 @@ h6 {
 }
 
 p {
-  max-inline-size: 75ch;
   text-wrap: pretty;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {
