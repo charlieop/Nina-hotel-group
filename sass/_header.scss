@@ -68,6 +68,8 @@ header {
       height: 1rem;
       //   background-color: red;
       translate: 0 -1px;
+      cursor: pointer;
+
     }
 
     .logo {
@@ -114,6 +116,12 @@ header {
       color: var(--clr-primary);
       font-size: var(--fs-200);
       font-weight: 400;
+
+      cursor: pointer;
+    }
+
+    .hamburger:hover, .cta:hover {
+      filter: brightness(1.2);
     }
   }
   @media (min-width: 768px) {

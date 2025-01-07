@@ -208,6 +208,7 @@ header .primary-nav .hamburger svg {
   width: 1rem;
   height: 1rem;
   translate: 0 -1px;
+  cursor: pointer;
 }
 header .primary-nav .logo {
   margin-right: auto;
@@ -246,6 +247,10 @@ header .primary-nav .cta {
   color: var(--clr-primary);
   font-size: var(--fs-200);
   font-weight: 400;
+  cursor: pointer;
+}
+header .primary-nav .hamburger:hover, header .primary-nav .cta:hover {
+  filter: brightness(1.2);
 }
 @media (min-width: 768px) {
   header .primary-nav {
@@ -609,6 +614,12 @@ section.landing .control-pause input:checked ~ .play {
 }
 section.landing .control-pause input:checked ~ .pause {
   display: none;
+}
+section.landing .control-pause:hover {
+  filter: brightness(0.8);
+}
+section.landing .control-pause:hover svg {
+  cursor: pointer;
 }
 section.landing .landing-nav {
   position: absolute;

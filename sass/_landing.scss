@@ -58,6 +58,13 @@ section.landing {
   .control-pause input:checked ~ .pause {
     display: none;
   }
+  .control-pause:hover {
+    svg {
+      cursor: pointer;
+    }
+
+    filter: brightness(0.8);
+  }
 
   .landing-nav {
     position: absolute;

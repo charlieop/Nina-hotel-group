@@ -27,9 +27,7 @@ function initOpenCloseSelect() {
     }
 
     if (selectDate.contains(e.target)) {
-      if (
-        e.target?.classList?.contains("date-item")
-      ) {
+      if (e.target?.classList?.contains("date-item")) {
         dateContextMenu.classList.remove("open");
         return;
       }
@@ -174,6 +172,14 @@ function initPlusMinus() {
     }
   });
   adultPlus.addEventListener("click", () => {
+    if (adultValue + childValue > 4 * roomValue) {
+      childValue = 0;
+      childDisplay.textContent = childValue;
+      adultValue = 1;
+      adultDisplay.textContent = adultValue;
+      return;
+    } else if (adultValue + childValue == 4 * roomValue) return;
+
     adultValue++;
     adultDisplay.textContent = adultValue;
   });
@@ -185,6 +191,13 @@ function initPlusMinus() {
     }
   });
   childPlus.addEventListener("click", () => {
+    if (adultValue + childValue > 4 * roomValue) {
+      childValue = 0;
+      childDisplay.textContent = childValue;
+      adultValue = 1;
+      adultDisplay.textContent = adultValue;
+      return;
+    } else if (adultValue + childValue == 4 * roomValue) return;
     childValue++;
     childDisplay.textContent = childValue;
   });
