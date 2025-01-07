@@ -154,6 +154,11 @@ body {
     background-position: right;
   }
 }
+@media (min-width: 1600px) {
+  :root {
+    --padding-inline: calc(50vw - 800px);
+  }
+}
 header {
   position: fixed;
   top: 0;
@@ -1053,6 +1058,13 @@ section.landing .landing-nav ul li a:hover svg * {
     font-size: var(--fs-100);
   }
 }
+@media (min-width: 1600px) {
+  .restaurants .gallery {
+    max-width: 1600px;
+    margin-inline: auto;
+    aspect-ratio: unset;
+  }
+}
 
 .banner {
   position: relative;
@@ -1310,5 +1322,10 @@ footer button svg {
     display: block;
     margin-left: 0;
     padding: 0;
+  }
+}
+@media (min-width: 1600px) {
+  footer {
+    padding-inline: var(--padding-inline);
   }
 }/*# sourceMappingURL=main.css.map */
