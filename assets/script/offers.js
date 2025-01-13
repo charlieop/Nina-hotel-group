@@ -65,7 +65,7 @@ function initSelectTab() {
     items[0].classList.add("selected");
     selectedValue = items[0].textContent;
   }
-  fetchOffers(selectedValue);
+  fetchOffers(selectedValue.toLowerCase());
 
   items.forEach((item) => {
     item.addEventListener("click", () => {
