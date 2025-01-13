@@ -17,7 +17,7 @@ async function fetchOffers(n) {
   const offersContainer = document.querySelector(".offers .offers-container");
   let cols = offersContainer.querySelectorAll(".offers-col");
   const noResult = document.querySelector(".offers .no-result");
-  const num_cols = cols.length;
+
   cols.forEach((col) => {
     col.innerHTML = "";
   });
@@ -28,15 +28,23 @@ async function fetchOffers(n) {
   }
 
   const name = n || "all";
-  const res = await fetch(`../assets/script/data/${name}.json`);
-  const data = await res.json();
-  if (data.Results.length == 0){
+  let data = undefined;
+  let storage = sessionStorage.getItem("offers") || "{}";
+  storage = JSON.parse(storage);
+  if (storage && storage[n]) {
+    data = storage[n];
+  } else {
+    const res = await fetch(`../assets/script/data/${name}.json`);
+    data = await res.json();
+    storage[n] = data;
+    sessionStorage.setItem("offers", JSON.stringify(storage));
+  }
+
+  if (data.Results.length == 0) {
     noResult.classList.remove("hide");
     return;
   }
-  console.log(data.Results);
   data.Results.forEach((result, i) => {
-
     let heighestColIndex = 0;
     let heighestColValue = Number.MAX_VALUE;
     cols.forEach((col, j) => {
@@ -45,8 +53,7 @@ async function fetchOffers(n) {
         heighestColIndex = j;
       }
     });
-    cols[heighestColIndex].innerHTML += result.Html
-
+    cols[heighestColIndex].innerHTML += result.Html;
   });
 }
 
@@ -54,11 +61,14 @@ function initSelectTab() {
   const filterTab = document.querySelector(".offers .filter-tab");
   const items = filterTab.querySelectorAll(".tabs li");
   const displayValue = filterTab.querySelector(".value");
+  const indicator = filterTab.querySelector(".active-bar");
   let isOpen = false;
   let selectedValue = null;
   items.forEach((item) => {
     if (item.classList.contains("selected")) {
       selectedValue = item.textContent;
+      indicator.style.left = item.offsetLeft - 4 + "px";
+      indicator.style.width = item.offsetWidth + 8 + "px";
     }
   });
   if (!selectedValue) {
@@ -75,6 +85,8 @@ function initSelectTab() {
       item.classList.add("selected");
       selectedValue = item.textContent;
       displayValue.textContent = selectedValue;
+      indicator.style.left = item.offsetLeft - 2 + "px";
+      indicator.style.width = item.offsetWidth + 4 + "px";
       fetchOffers(selectedValue.toLowerCase());
     });
   });

@@ -1076,8 +1076,15 @@ section.landing .landing-nav ul li a:hover svg * {
   padding: 1rem;
   padding-bottom: 0.75rem;
 }
-.offers .filter-tab .tabs li.selected {
-  border-bottom: 2px solid var(--clr-black);
+.offers .filter-tab .tabs .active-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 0px;
+  height: 2px;
+  background-color: var(--clr-black);
+  z-index: 1;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 .offers .filter-tab .tabs::after {
   content: "";
@@ -1160,7 +1167,8 @@ section.landing .landing-nav ul li a:hover svg * {
     position: absolute;
     width: calc(100% + 2rem);
     left: 50%;
-    top: calc(100% + 1px);
+    top: calc(100% + 0.5rem);
+    border-radius: 0.5rem;
     translate: -50% 0;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px 0px;
     flex-direction: column;
@@ -1179,8 +1187,8 @@ section.landing .landing-nav ul li a:hover svg * {
     translate: -50% 0;
     background-color: rgba(229, 229, 229, 0.5490196078);
   }
-  .offers .filter-tab .tabs li.selected {
-    border-bottom: unset;
+  .offers .filter-tab .tabs .active-bar {
+    display: none;
   }
   .offers .tabs::after {
     display: none;
