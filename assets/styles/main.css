@@ -366,6 +366,8 @@ header .primary-nav .cta:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+  header .primary-nav .link > span, header .primary-nav .link svg {
     cursor: pointer;
   }
 }
@@ -655,9 +657,9 @@ body:has(.cta-wrapper input:checked) {
   color: var(--clr-primary);
   font-size: var(--fs-450);
   font-weight: 400;
-  cursor: pointer;
 }
 .links-panel .selectable span {
+  cursor: pointer;
   position: relative;
 }
 .links-panel .hidden-content {

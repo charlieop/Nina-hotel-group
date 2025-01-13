@@ -32,11 +32,11 @@
     color: var(--clr-primary);
     font-size: var(--fs-450);
     font-weight: 400;
-    cursor: pointer;
   }
 
   .selectable {
     span {
+      cursor: pointer;
       position: relative;
     }
   }
@@ -139,7 +139,6 @@
 
     .hidden-content {
       padding: 1.5rem 0.25rem;
-
     }
 
     .panel-footer {
