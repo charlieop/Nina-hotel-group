@@ -1,0 +1,202 @@
+.offers {
+  --padding-inline: calc(50vw - 600px);
+
+  padding: 4.5rem var(--padding-inline);
+
+  .title {
+    text-align: center;
+    h3 {
+      font-size: var(--fs-700);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--clr-primary);
+      margin-bottom: 1.5rem;
+    }
+    p {
+      display: none;
+      line-height: 1.5;
+      color: var(--clr-black);
+      letter-spacing: 0.2px;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .filter-tab {
+    .mobile-display {
+      display: none;
+    }
+    .tabs {
+      position: relative;
+      width: fit-content;
+      margin-inline: auto;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+
+      li {
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        color: #5a4132;
+        letter-spacing: 0.2px;
+        padding: 1rem;
+        padding-bottom: 0.75rem;
+      }
+      li.selected {
+        border-bottom: 2px solid var(--clr-black);
+      }
+    }
+    .tabs::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -1rem;
+      width: calc(100% + 2rem);
+      height: 2px;
+      background-color: var(--clr-offwhite);
+    }
+  }
+
+  .offers-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-block: 4.6rem;
+
+    .offers-col {
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .push {
+      margin-top: 4.5rem;
+    }
+  }
+
+  .no-result {
+    text-align: center;
+    height: 100%;
+    font-size: var(--fs-400);
+    color: var(--clr-black);
+  }
+  .no-result.hide {
+    display: none;
+  }
+  .offers-container:has(.no-result:not(.hide)) {
+    .offers-col {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding-inline: 1rem;
+    }
+
+    .title {
+      h3 {
+        font-size: var(--fs-650);
+      }
+      p {
+        font-size: var(--fs-300);
+      }
+    }
+
+    .filter-tab {
+      position: relative;
+      margin-inline: 1rem;
+      padding: 1rem 0.75rem;
+      border-top: 1px solid var(--clr-offwhite);
+      border-bottom: 1px solid var(--clr-offwhite);
+
+      .mobile-display {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--clr-black);
+        font-size: var(--fs-200);
+        .value {
+          font-weight: 500;
+          font-size: var(--fs-400);
+        }
+        img {
+          margin-left: auto;
+          transition: var(--transition);
+        }
+      }
+      .tabs {
+        display: none;
+        opacity: 0;
+
+        transition-property: display opacity;
+        transition: 0.3s;
+        transition-behavior: allow-discrete;
+
+        position: absolute;
+        width: calc(100% + 2rem);
+        left: 50%;
+        top: calc(100% + 1px);
+        translate: -50% 0;
+
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px 0px;
+
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        align-items: center;
+        background-color: var(--clr-white);
+
+        li:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 7rem;
+          height: 1px;
+          translate: -50% 0;
+          background-color: #e5e5e58c;
+        }
+        li.selected {
+          border-bottom: unset;
+        }
+      }
+    }
+    .tabs::after {
+      display: none;
+    }
+
+    .filter-tab.expand {
+      .mobile-display img {
+        transform: rotate(180deg);
+      }
+
+      .tabs {
+        @starting-style {
+          opacity: 0;
+        }
+        opacity: 1;
+
+        display: flex;
+      }
+    }
+
+    .offers-container {
+      .offers-col:not(:first-child) {
+        display: none;
+      }
+      .offers-col:first-child {
+        margin-top: 0;
+        gap: 4rem;
+      }
+    }
+  }
+}

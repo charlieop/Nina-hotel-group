@@ -1,0 +1,26 @@
+{
+  "TotalTime": 83,
+  "CountTime": 0,
+  "QueryTime": 42,
+  "Signature": null,
+  "Index": "sitecore_sxa_web_index",
+  "Count": 2,
+  "Results": [
+    {
+      "Id": "1cd14687-9b38-4da1-8492-76f34b38f282",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Wedding Suite Package",
+      "Url": "/en/Offers/Wedding-Suite-Package",
+      "Name": null,
+      "Html": "\r\n<div class=\"card-item\">\r\n    <div class=\"card-item-image-wrapper\">\r\n        <img class=\"card-item-image  \" src=\"https://www.ninahotelgroup.com//-/media/01---Website-Imagery/Nina-Hotels/Properties/TWW/Offer-Listing/Tww_offer_wedding-suite_cover_540x540.jpg?rev=d75b1afa83d94944b8c71f5b211cb768\" alt=\"\" />\r\n        \r\n    </div>\r\n    <div class=\"card-item-tag\"> Weddings</div>    \r\n    \r\n       <div class=\"card-item-title\"><h4><font color=\"#A17C5B\">WEDDING SUITE PACKAGE</font></h4></div>\r\n     \r\n    <div class=\"card-item-body\"><p><span style=\"background: white; padding: 0cm; border: 1pt none windowtext; color: black;\">Stay in our suite and we will take care of your tea ceremony.</span></p>\n<p>&nbsp;</p></div>\r\n\r\n    <div class=\"card-item-btns\">\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        <a href=\"/en/Offers/Wedding-Suite-Package\" class=\"explore-more-btn\">Learn more</a>\r\n        \r\n    </div>\r\n</div>\r\n"
+    },
+    {
+      "Id": "3af01fab-07a2-4ea1-b880-4deffb0d50ca",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Nina Patisserie Wedding",
+      "Url": "/en/Offers/Nina-Patisserie-Wedding",
+      "Name": null,
+      "Html": "\r\n<div class=\"card-item\">\r\n    <div class=\"card-item-image-wrapper\">\r\n        <img class=\"card-item-image  \" src=\"https://www.ninahotelgroup.com//-/media/01---Website-Imagery/wedding-offer/IMG_2347.jpg?rev=803ae1b87c4c4d6caf99e684f1dd160b\" alt=\"palmier\" />\r\n        \r\n    </div>\r\n    <div class=\"card-item-tag\"> Weddings</div>    \r\n    \r\n       <div class=\"card-item-title\"><h4><font color=\"#A17C5B\">SWEET GIFTS TO CAPTURE THE MOMENT</font></h4></div>\r\n     \r\n    <div class=\"card-item-body\"><p>Get all the pastries, sweet treats and gifts essentials for your wedding guests.</p></div>\r\n\r\n    <div class=\"card-item-btns\">\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        <a href=\"/en/Offers/Nina-Patisserie-Wedding\" class=\"explore-more-btn\">Learn more</a>\r\n        \r\n    </div>\r\n</div>\r\n"
+    }
+  ]
+}

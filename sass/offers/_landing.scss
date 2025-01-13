@@ -1,0 +1,203 @@
+section.landing {
+  position: relative;
+  img {
+    width: 100%;
+    height: 640px;
+    background: black;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 233px;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(
+      rgb(30, 30, 30) 0px,
+      rgba(38, 38, 38, 0.65) 21.4%,
+      rgba(39, 39, 39, 0.38) 56.32%,
+      rgba(74, 74, 74, 0) 70.17%,
+      rgba(85, 85, 85, 0.14) 83.72%,
+      rgba(129, 129, 129, 0) 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 296px;
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(
+      to top,
+      rgb(30, 30, 30) 0px,
+      rgba(38, 38, 38, 0.65) 21.4%,
+      rgba(39, 39, 39, 0.38) 56.32%,
+      rgba(74, 74, 74, 0) 70.17%,
+      rgba(85, 85, 85, 0.14) 83.72%,
+      rgba(129, 129, 129, 0) 100%
+    );
+  }
+
+  h1 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    font-size: var(--fs-900);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    color: var(--clr-white);
+  }
+
+  .landing-nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 5rem;
+    z-index: 1;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: var(--padding-inline);
+
+      li a {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        place-items: center;
+        gap: var(--fs-300);
+
+        font-size: var(--fs-300);
+
+        svg {
+          height: 2.875rem;
+          width: 2.875rem;
+        }
+
+        &:hover {
+          svg * {
+            fill: var(--clr-landing-hover);
+          }
+          color: var(--clr-landing-hover);
+        }
+      }
+    }
+  }
+  @media (min-width: 991px) {
+    .landing-nav {
+      position: fixed;
+      height: fit-content !important;
+      width: 60vw;
+      left: calc(3rem + var(--padding-inline));
+      top: 5rem;
+      z-index: 100;
+
+      ul {
+        padding-inline: 0;
+        max-width: max-content;
+        gap: 3rem;
+      }
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        a:hover {
+          color: var(--clr-lightblue) !important;
+        }
+      }
+      li:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: calc(-1 * min(2.85vw, 1.5rem));
+        top: 30%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 999%;
+        background: var(--clr-landing-hover);
+      }
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .landing-nav {
+      position: fixed;
+      bottom: 0;
+      background: var(--clr-white);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px -1px 4px 0px;
+
+      svg * {
+        fill: #616161;
+      }
+      color: #616161;
+
+      ul {
+        padding-inline: 0;
+        gap: 0rem;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        li {
+          flex-shrink: 0;
+          padding: 1rem 1.625rem;
+
+          a {
+            font-size: var(--fs-200);
+
+            &:hover {
+              svg * {
+                fill: #616161;
+              }
+              text-decoration: underline;
+              color: #616161;
+              filter: brightness(0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      height: 530px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-bottom: 106px;
+  }
+}
+
+@media (min-width: 991px) {
+  body:has(header:hover) .landing-nav {
+    color: var(--clr-black);
+    li:not(:last-child)::after {
+      background: var(--clr-black);
+    }
+  }
+  .landing .landing-nav:hover {
+    color: var(--clr-black);
+    ul li:not(:last-child)::after {
+      background: var(--clr-black);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.banner {
+  --_width: min(56.3vw, 821px);
+
+  background: rgba(15, 70, 67, 0.25);
+  font-weight: 400;
+  text-align: center;
+  padding-block: 4.5rem;
+
+  & > * {
+    width: var(--_width);
+    margin-inline: auto;
+  }
+
+  h2 {
+    color: var(--clr-accent);
+    position: relative;
+    font-size: var(--fs-700);
+    letter-spacing: 1px;
+    line-height: 1.3125;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 2px;
+    background: var(--clr-accent);
+  }
+
+  p {
+    color: var(--clr-black);
+    margin-top: 1.5rem;
+    font-size: var(--fs-300);
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+
+  @media (max-width: 991px) {
+    --_width: 100%;
+    padding-inline: 2.5rem;
+  }
+  @media (max-width: 768px) {
+    padding-inline: 1rem;
+    h2 {
+      font-size: var(--fs-650);
+    }
+    p {
+      font-size: var(--fs-200);
+    }
+  }
+}

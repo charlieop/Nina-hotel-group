@@ -1,14 +1,14 @@
-@import "resets";
-@import "fonts";
-@import "style";
+@import "shared/resets";
+@import "shared/fonts";
+@import "shared/style";
 
 
-@import "header";
-@import "booking";
-@import "links-panel";
-@import "landing";
-@import "hotel-introduction";
-@import "restaurants";
-@import "banner";
-@import "offers";
-@import "footer";
+@import "main/header";
+@import "shared/booking";
+@import "shared/links-panel";
+@import "main/landing";
+@import "main/hotel-introduction";
+@import "main/restaurants";
+@import "main/banner";
+@import "main/offers";
+@import "shared/footer";

@@ -1,0 +1,58 @@
+{
+  "TotalTime": 131,
+  "CountTime": 0,
+  "QueryTime": 54,
+  "Signature": null,
+  "Index": "sitecore_sxa_web_index",
+  "Count": 7,
+  "Results": [
+    {
+      "Id": "cbbf5a1d-b08b-4eb7-af08-3bd8583bc427",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Limited-time Stay Offer",
+      "Url": "/en/Offers/Limited-time-Stay-Offer",
+      "Name": null,
+      "Html": "\r\n\u003Cdiv class=\"card-item\"\u003E\r\n    \u003Cdiv class=\"card-item-image-wrapper\"\u003E\r\n        \u003Cimg class=\"card-item-image  \" src=\"https://mc-153793c1-e3f4-4101-95d0-1075-afd-cue4g5evdfcng3df.a02.azurefd.net/-/media/01---Website-Imagery/Nina-Hotels/NH-Group/Promotion/Deluxue-Executive-Room_1080x1080.jpg?rev=cbd571bce77b4023b66dca00a7554a57\" alt=\"Hong Kong Hotels Limited-time Offer | Nina Hotels\" /\u003E\r\n        \r\n    \u003C/div\u003E\r\n    \u003Cdiv class=\"card-item-tag\"\u003E Accommodation\u003C/div\u003E    \r\n    \r\n       \u003Cdiv class=\"card-item-title\"\u003E\u003Ch4\u003E\u003Cfont color=\"#A17C5B\"\u003ELIMITED-TIME STAY OFFER\u003C/font\u003E\u003C/h4\u003E\u003C/div\u003E\r\n     \r\n    \u003Cdiv class=\"card-item-body\"\u003EEnjoy up to 10% off our Best Available Rate when you book directly from now to 31 December 2025. Book now and save more!\u003C/div\u003E\r\n\r\n    \u003Cdiv class=\"card-item-btns\"\u003E\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        \u003Ca href=\"/en/Offers/Limited-time-Stay-Offer\" class=\"explore-more-btn\"\u003ELearn more\u003C/a\u003E\r\n        \r\n    \u003C/div\u003E\r\n\u003C/div\u003E\r\n"
+    },
+    {
+      "Id": "9548e0f5-0090-4f3c-b958-d57531d18622",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/stay longer pay less",
+      "Url": "/en/Offers/stay-longer-pay-less",
+      "Name": null,
+      "Html": "\r\n\u003Cdiv class=\"card-item\"\u003E\r\n    \u003Cdiv class=\"card-item-image-wrapper\"\u003E\r\n        \u003Cimg class=\"card-item-image  \" src=\"https://mc-153793c1-e3f4-4101-95d0-1075-afd-cue4g5evdfcng3df.a02.azurefd.net/-/media/01---Website-Imagery/Nina-Hotels/Properties/IS/Offers/Bonus-Night_1034px-x-583px.jpg?rev=af900970932842258fa98eb94afb9f2d\" alt=\"Bonus Night Banner\" /\u003E\r\n        \r\n    \u003C/div\u003E\r\n    \u003Cdiv class=\"card-item-tag\"\u003E Accommodation\u003C/div\u003E    \r\n    \r\n       \u003Cdiv class=\"card-item-title\"\u003E\u003Ch4\u003E\u003Cfont color=\"#A17C5B\"\u003ESTAY LONGER PAY LESS\u003C/font\u003E\u003C/h4\u003E\u003C/div\u003E\r\n     \r\n    \u003Cdiv class=\"card-item-body\"\u003EStay a minimum of 3 nights and save 18% off on our Best Available Rate. Stay 4 nights or more and save 25% off!\u003C/div\u003E\r\n\r\n    \u003Cdiv class=\"card-item-btns\"\u003E\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        \u003Ca href=\"/en/Offers/stay-longer-pay-less\" class=\"explore-more-btn\"\u003ELearn more\u003C/a\u003E\r\n        \r\n    \u003C/div\u003E\r\n\u003C/div\u003E\r\n"
+    },
+    {
+      "Id": "c4efb360-6d6c-4365-aa9f-75f4c224055c",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Privileges for Advance Purchase",
+      "Url": "/en/Offers/Privileges-for-Advance-Purchase",
+      "Name": null,
+      "Html": "\r\n\u003Cdiv class=\"card-item\"\u003E\r\n    \u003Cdiv class=\"card-item-image-wrapper\"\u003E\r\n        \u003Cimg class=\"card-item-image  \" src=\"https://mc-153793c1-e3f4-4101-95d0-1075-afd-cue4g5evdfcng3df.a02.azurefd.net/-/media/01---Website-Imagery/Nina-Hotels/Properties/IS/Offers/Advance-Purchase_1034px-x-583px.jpg?rev=ec5e497a5f754cc6b45090e6e9aa5d01\" alt=\"\" /\u003E\r\n        \r\n    \u003C/div\u003E\r\n    \u003Cdiv class=\"card-item-tag\"\u003E Accommodation\u003C/div\u003E    \r\n    \r\n       \u003Cdiv class=\"card-item-title\"\u003E\u003Ch4\u003E\u003Cfont color=\"#A17C5B\"\u003E ADVANCE PURCHASE PRIVILEGES\u003C/font\u003E\u003C/h4\u003E\u003C/div\u003E\r\n     \r\n    \u003Cdiv class=\"card-item-body\"\u003EBook 21 days in advance to enjoy 15% off, 30 days in advance to enjoy 20% off and 45 days in advance to enjoy 25% off on our Best Available Rate.\u003C/div\u003E\r\n\r\n    \u003Cdiv class=\"card-item-btns\"\u003E\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        \u003Ca href=\"/en/Offers/Privileges-for-Advance-Purchase\" class=\"explore-more-btn\"\u003ELearn more\u003C/a\u003E\r\n        \r\n    \u003C/div\u003E\r\n\u003C/div\u003E\r\n"
+    },
+    {
+      "Id": "1cd14687-9b38-4da1-8492-76f34b38f282",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Wedding Suite Package",
+      "Url": "/en/Offers/Wedding-Suite-Package",
+      "Name": null,
+      "Html": "\r\n\u003Cdiv class=\"card-item\"\u003E\r\n    \u003Cdiv class=\"card-item-image-wrapper\"\u003E\r\n        \u003Cimg class=\"card-item-image  \" src=\"https://mc-153793c1-e3f4-4101-95d0-1075-afd-cue4g5evdfcng3df.a02.azurefd.net/-/media/01---Website-Imagery/Nina-Hotels/Properties/TWW/Offer-Listing/Tww_offer_wedding-suite_cover_540x540.jpg?rev=d75b1afa83d94944b8c71f5b211cb768\" alt=\"\" /\u003E\r\n        \r\n    \u003C/div\u003E\r\n    \u003Cdiv class=\"card-item-tag\"\u003E Weddings\u003C/div\u003E    \r\n    \r\n       \u003Cdiv class=\"card-item-title\"\u003E\u003Ch4\u003E\u003Cfont color=\"#A17C5B\"\u003EWEDDING SUITE PACKAGE\u003C/font\u003E\u003C/h4\u003E\u003C/div\u003E\r\n     \r\n    \u003Cdiv class=\"card-item-body\"\u003E\u003Cp\u003E\u003Cspan style=\"background: white; padding: 0cm; border: 1pt none windowtext; color: black;\"\u003EStay in our suite and we will take care of your tea ceremony.\u003C/span\u003E\u003C/p\u003E\n\u003Cp\u003E&nbsp;\u003C/p\u003E\u003C/div\u003E\r\n\r\n    \u003Cdiv class=\"card-item-btns\"\u003E\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        \u003Ca href=\"/en/Offers/Wedding-Suite-Package\" class=\"explore-more-btn\"\u003ELearn more\u003C/a\u003E\r\n        \r\n    \u003C/div\u003E\r\n\u003C/div\u003E\r\n"
+    },
+    {
+      "Id": "c77fc149-bfa5-422c-8790-6e860f3cd9ba",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Stay Connected at Nina Irresistible Long Staying Package",
+      "Url": "/en/Offers/Stay-Connected-at-Nina-Irresistible-Long-Staying-Package",
+      "Name": null,
+      "Html": "\r\n\u003Cdiv class=\"card-item\"\u003E\r\n    \u003Cdiv class=\"card-item-image-wrapper\"\u003E\r\n        \u003Cimg class=\"card-item-image  \" src=\"https://mc-153793c1-e3f4-4101-95d0-1075-afd-cue4g5evdfcng3df.a02.azurefd.net/-/media/01---Website-Imagery/Nina-Hotels/NH-Group/Promotion/20241114_3750x2166px.jpg?rev=89a35e76c54e45a28735a86430ce7955\" alt=\"Hong Kong Hotel Long Stay Package 2024 | Nina Hospitality \" /\u003E\r\n        \r\n    \u003C/div\u003E\r\n    \u003Cdiv class=\"card-item-tag\"\u003E Accommodation\u003C/div\u003E    \r\n    \r\n       \u003Cdiv class=\"card-item-title\"\u003E\u003Ch4\u003E\u003Cfont color=\"#A17C5B\"\u003EIRRESISTIBLE LONG STAYING PACKAGE\u003C/font\u003E\u003C/h4\u003E\u003C/div\u003E\r\n     \r\n    \u003Cdiv class=\"card-item-body\"\u003EStay longer, save more. Enjoy special monthly rates when you stay 28 or more consecutive nights.\u003C/div\u003E\r\n\r\n    \u003Cdiv class=\"card-item-btns\"\u003E\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        \u003Ca href=\"/en/Offers/Stay-Connected-at-Nina-Irresistible-Long-Staying-Package\" class=\"explore-more-btn\"\u003ELearn more\u003C/a\u003E\r\n        \r\n    \u003C/div\u003E\r\n\u003C/div\u003E\r\n"
+    },
+    {
+      "Id": "5b5ad8ce-dfd5-47dc-99af-9d45f48e505d",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Stay Dine with Nina Hospitality",
+      "Url": "/en/Offers/Stay-Dine-with-Nina-Hospitality",
+      "Name": null,
+      "Html": "\r\n\u003Cdiv class=\"card-item\"\u003E\r\n    \u003Cdiv class=\"card-item-image-wrapper\"\u003E\r\n        \u003Cimg class=\"card-item-image  \" src=\"https://mc-153793c1-e3f4-4101-95d0-1075-afd-cue4g5evdfcng3df.a02.azurefd.net/-/media/01---Website-Imagery/Nina-Hotels/Properties/KE/offers/Offer-card-image/ninahotelkowlooneast-offers-detoxwithdelight-900x900.jpg?rev=d12c5fe4937642c1ad78c006e8c8a57e\" alt=\"Detox with delight staycation offer by Nina Hotel Kowloon East\" /\u003E\r\n        \r\n    \u003C/div\u003E\r\n    \u003Cdiv class=\"card-item-tag\"\u003E Accommodation\u003C/div\u003E    \r\n    \r\n       \u003Cdiv class=\"card-item-title\"\u003E\u003Ch4\u003E\u003Cfont color=\"#A17C5B\"\u003ESTAY & DINE WITH NINA HOSPITALITY!\u003C/font\u003E\u003C/h4\u003E\u003C/div\u003E\r\n     \r\n    \u003Cdiv class=\"card-item-body\"\u003E\u003Cp\u003EIndulge in the festive season by staying in one of our spacious rooms and enjoy selected dining privileges such as festive lunch or dinner buffet. \u003C/p\u003E\u003C/div\u003E\r\n\r\n    \u003Cdiv class=\"card-item-btns\"\u003E\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        \u003Ca href=\"/en/Offers/Stay-Dine-with-Nina-Hospitality\" class=\"explore-more-btn\"\u003ELearn more\u003C/a\u003E\r\n        \r\n    \u003C/div\u003E\r\n\u003C/div\u003E\r\n"
+    }
+  ]
+}

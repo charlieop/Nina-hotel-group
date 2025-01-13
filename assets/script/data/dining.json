@@ -1,0 +1,18 @@
+{
+  "TotalTime": 62,
+  "CountTime": 0,
+  "QueryTime": 9,
+  "Signature": null,
+  "Index": "sitecore_sxa_web_index",
+  "Count": 1,
+  "Results": [
+    {
+      "Id": "5b5ad8ce-dfd5-47dc-99af-9d45f48e505d",
+      "Language": "en",
+      "Path": "/sitecore/content/Nina/Nina/Home/Offers/Stay Dine with Nina Hospitality",
+      "Url": "/en/Offers/Stay-Dine-with-Nina-Hospitality",
+      "Name": null,
+      "Html": "\r\n<div class=\"card-item\">\r\n    <div class=\"card-item-image-wrapper\">\r\n        <img class=\"card-item-image  \" src=\"https://mc-153793c1-e3f4-4101-95d0-1075-afd-cue4g5evdfcng3df.a02.azurefd.net/-/media/01---Website-Imagery/Nina-Hotels/Properties/KE/offers/Offer-card-image/ninahotelkowlooneast-offers-detoxwithdelight-900x900.jpg?rev=d12c5fe4937642c1ad78c006e8c8a57e\" alt=\"Detox with delight staycation offer by Nina Hotel Kowloon East\" />\r\n        \r\n    </div>\r\n    <div class=\"card-item-tag\"> Accommodation</div>    \r\n    \r\n       <div class=\"card-item-title\"><h4><font color=\"#A17C5B\">STAY & DINE WITH NINA HOSPITALITY!</font></h4></div>\r\n     \r\n    <div class=\"card-item-body\"><p>Indulge in the festive season by staying in one of our spacious rooms and enjoy selected dining privileges such as festive lunch or dinner buffet. </p></div>\r\n\r\n    <div class=\"card-item-btns\">\r\n        \r\n        \r\n        \r\n        \r\n        \r\n        <a href=\"/en/Offers/Stay-Dine-with-Nina-Hospitality\" class=\"explore-more-btn\">Learn more</a>\r\n        \r\n    </div>\r\n</div>\r\n"
+    }
+  ]
+}
