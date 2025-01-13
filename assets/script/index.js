@@ -11,7 +11,30 @@ function init() {
   initDateSelect();
   initOpenCloseSelect();
   initHeaderTabs();
+  initSelectLinks();
 }
+
+function removeSelectedLink() {
+  const links = document.querySelectorAll(".links-panel .selectable");
+  links.forEach((link) => {
+    link.classList.remove("selected");
+  });
+}
+
+function initSelectLinks() {
+  const links = document.querySelectorAll(".links-panel .selectable");
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      link.classList.add("selected");
+    });
+  });
+
+  const back = document.getElementById("back-links");
+  back.addEventListener("click", () => {
+    removeSelectedLink();
+  });
+}
+
 function initHeaderTabs() {
   const languageTabs = document.getElementById("language-tabs");
   const locationTabs = document.getElementById("location-tabs");
@@ -259,6 +282,7 @@ function initClosePanel() {
   const closeBooking = document.getElementById("close-booking");
   closeLinks.addEventListener("click", () => {
     linksOpen.checked = false;
+    removeSelectedLink();
   });
   closeBooking.addEventListener("click", () => {
     bookingOpen.checked = false;
@@ -268,6 +292,7 @@ function initClosePanel() {
   preventClick.addEventListener("click", () => {
     linksOpen.checked = false;
     bookingOpen.checked = false;
+    removeSelectedLink();
   });
 }
 
