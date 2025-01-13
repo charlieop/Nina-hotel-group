@@ -200,4 +200,11 @@ section.landing {
       background: var(--clr-black);
     }
   }
+
+  body:has(.hamburger-wrapper input:checked),
+  body:has(.cta-wrapper input:checked) {
+    .landing-nav {
+      z-index: 10;
+    }
+  }
 }

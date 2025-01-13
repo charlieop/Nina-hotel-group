@@ -35,6 +35,17 @@ header {
       .link svg * {
         fill: var(--clr-black);
       }
+      .hamburger-wrapper .hamburger {
+        svg * {
+          fill: var(--clr-primary);
+        }
+      }
+
+      .cta {
+        background: var(--clr-primary);
+        color: var(--clr-white);
+        border: none;
+      }
     }
 
     .nav-list {
