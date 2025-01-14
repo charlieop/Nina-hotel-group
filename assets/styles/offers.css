@@ -1033,7 +1033,6 @@ section.landing .landing-nav ul li a:hover svg * {
 }
 
 .offers {
-  --padding-inline: calc(50vw - 600px);
   padding: 4.5rem var(--padding-inline);
 }
 .offers .title {
