@@ -17,21 +17,17 @@ function init() {
   });
 }
 
-let lastRun = 0;
 let timeout;
-const minInterval = 300;
-function reorderOffers() {
-  const now = Date.now();
-  clearTimeout(timeout);
-  if (now - lastRun >= minInterval) {
-    lastRun = now;
+function reorderOffers(directly = false) {
+  const debounce = 200;
+  if (directly) {
     _reorderOffers();
-  } else {
-    timeout = setTimeout(() => {
-      lastRun = Date.now();
-      _reorderOffers();
-    }, minInterval - (now - lastRun));
+    return;
   }
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    _reorderOffers();
+  }, debounce);
 }
 
 function _reorderOffers() {
@@ -93,7 +89,7 @@ function displayOffers(data, loading = false) {
   offersContainer.innerHTML = "";
   if (data.length == 0) {
     offersContainer.appendChild(noResult);
-    reorderOffers();
+    reorderOffers(true);
     return;
   }
   data.forEach((result, i) => {
@@ -109,7 +105,7 @@ function displayOffers(data, loading = false) {
       resizeObserver.unobserve(img);
     });
   });
-  reorderOffers();
+  reorderOffers(true);
 }
 
 async function fetchOffers(n) {
@@ -129,7 +125,7 @@ async function fetchOffers(n) {
         data["ExpiresAt"] = new Date().getTime() + 1000 * 60 * 60 * 8;
         storage[n] = data;
         localStorage.setItem("offers", JSON.stringify(storage));
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
         displayOffers(data.Results || []);
       })
       .catch((err) => {
