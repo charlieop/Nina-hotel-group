@@ -66,22 +66,29 @@
   }
 
   .offers-container {
+    position: relative;
     display: flex;
-    gap: 3rem;
+    gap: 3.5rem;
+    flex-direction: column;
     justify-content: center;
     margin-block: 4.6rem;
 
-    .offers-col {
-      flex-basis: 0;
-      flex-grow: 1;
-      flex-shrink: 1;
-      height: fit-content;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-    }
-    .push {
-      margin-top: 4.5rem;
+    img {
+      width: 100%;
+      background: linear-gradient(
+          90deg,
+          #0001 33%,
+          rgba(101, 101, 101, 0.15) 50%,
+          #0001 66%
+        )
+        #f2f2f2;
+      background-size: 300% 100%;
+      animation: l1 1s infinite linear;
+      @keyframes l1 {
+        0% {
+          background-position: right;
+        }
+      }
     }
   }
 
@@ -93,11 +100,6 @@
   }
   .no-result.hide {
     display: none;
-  }
-  .offers-container:has(.no-result:not(.hide)) {
-    .offers-col {
-      display: none;
-    }
   }
 
   @media (max-width: 991px) {
@@ -148,6 +150,7 @@
         transition-behavior: allow-discrete;
 
         position: absolute;
+        z-index: 99;
         width: calc(100% + 2rem);
         left: 50%;
         top: calc(100% + 0.5rem);
@@ -194,16 +197,6 @@
         opacity: 1;
 
         display: flex;
-      }
-    }
-
-    .offers-container {
-      .offers-col:not(:first-child) {
-        display: none;
-      }
-      .offers-col:first-child {
-        margin-top: 0;
-        gap: 4rem;
       }
     }
   }

@@ -33,7 +33,6 @@ video {
   background-repeat: no-repeat;
   background-size: cover;
   shape-margin: 1rem;
-  max-width: 100%;
   height: auto;
   vertical-align: middle;
   -o-object-fit: cover;

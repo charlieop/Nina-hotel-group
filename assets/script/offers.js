@@ -11,50 +11,134 @@ function init() {
   initSelectLinks();
 
   initSelectTab();
+
+  window.addEventListener("resize", (e) => {
+    reorderOffers();
+  });
+}
+
+let lastRun = 0;
+let timeout;
+const minInterval = 300;
+function reorderOffers() {
+  const now = Date.now();
+  clearTimeout(timeout);
+  if (now - lastRun >= minInterval) {
+    lastRun = now;
+    _reorderOffers();
+  } else {
+    timeout = setTimeout(() => {
+      lastRun = Date.now();
+      _reorderOffers();
+    }, minInterval - (now - lastRun));
+  }
+}
+
+function _reorderOffers() {
+  const offersContainer = document.querySelector(".offers .offers-container");
+  const offers = offersContainer.querySelectorAll(".card-item");
+
+  offersContainer.style.minHeight = "unset";
+
+  if (!offers || offers.length == 0) {
+    return;
+  }
+
+  const isMobile = window.innerWidth < 768;
+  if (isMobile) {
+    offers.forEach((offer, i) => {
+      offer.style.position = "static";
+      offer.style.width = "100%";
+    });
+    return;
+  }
+
+  const gap = 3 * 16;
+  let heightToTop = [4.5 * 16, 0];
+  let cardWidth = `calc(50% - ${gap / 2}px)`;
+  offers.forEach((offer, i) => {
+    offer.style.width = cardWidth;
+    offer.style.left = "unset";
+    offer.style.right = "unset";
+
+    const minHeightIndex = heightToTop[0] < heightToTop[1] ? 0 : 1;
+    offer.style.position = "absolute";
+    offer.style.top = heightToTop[minHeightIndex] + "px";
+    if (minHeightIndex == 0) {
+      offer.style.left = "0";
+    } else {
+      offer.style.right = "0";
+    }
+    heightToTop[minHeightIndex] += offer.offsetHeight + gap;
+  });
+
+  offersContainer.style.minHeight = Math.max(...heightToTop) + "px";
+}
+
+function displayOffers(data, loading = false) {
+  const offersContainer = document.querySelector(".offers .offers-container");
+
+  const noResult = document.createElement("div");
+  noResult.classList.add("no-result");
+  if (loading) noResult.textContent = "Loading ...";
+  else noResult.textContent = "No Results Found";
+
+  const resizeObserver = new ResizeObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.contentRect.width == 0 || entry.contentRect.height == 0) return;
+      reorderOffers();
+    }
+  });
+
+  offersContainer.innerHTML = "";
+  if (data.length == 0) {
+    offersContainer.appendChild(noResult);
+    reorderOffers();
+    return;
+  }
+  data.forEach((result, i) => {
+    const offer = document.createElement("div");
+    offer.innerHTML = result.Html.replace(/\s+/g, " ").trim();
+
+    const card = offer.querySelector(".card-item");
+    offersContainer.appendChild(card);
+
+    const img = card.querySelector("img");
+    resizeObserver.observe(img);
+    img.addEventListener("load", () => {
+      resizeObserver.unobserve(img);
+    });
+  });
+  reorderOffers();
 }
 
 async function fetchOffers(n) {
-  const offersContainer = document.querySelector(".offers .offers-container");
-  let cols = offersContainer.querySelectorAll(".offers-col");
-  const noResult = document.querySelector(".offers .no-result");
-
-  cols.forEach((col) => {
-    col.innerHTML = "";
-  });
-  noResult.classList.add("hide");
-  const isMobile = window.innerWidth < 768;
-  if (isMobile) {
-    cols = [cols[0]];
-  }
-
   const name = n || "all";
   let data = undefined;
-  let storage = sessionStorage.getItem("offers") || "{}";
+  let storage = localStorage.getItem("offers") || "{}";
   storage = JSON.parse(storage);
-  if (storage && storage[n]) {
-    data = storage[n];
-  } else {
-    const res = await fetch(`../assets/script/data/${name}.json`);
-    data = await res.json();
-    storage[n] = data;
-    sessionStorage.setItem("offers", JSON.stringify(storage));
+  if (
+    !storage ||
+    !storage[n] ||
+    !storage[n].ExpiresAt ||
+    storage[n].ExpiresAt <= new Date().getTime()
+  ) {
+    const res = fetch(`../assets/script/data/${name}.json`)
+      .then((res) => res.json())
+      .then(async (data) => {
+        data["ExpiresAt"] = new Date().getTime() + 1000 * 60 * 60 * 8;
+        storage[n] = data;
+        localStorage.setItem("offers", JSON.stringify(storage));
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        displayOffers(data.Results || []);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
-  if (data.Results.length == 0) {
-    noResult.classList.remove("hide");
-    return;
-  }
-  data.Results.forEach((result, i) => {
-    let heighestColIndex = 0;
-    let heighestColValue = Number.MAX_VALUE;
-    cols.forEach((col, j) => {
-      if (col.getBoundingClientRect().bottom < heighestColValue) {
-        heighestColValue = col.getBoundingClientRect().bottom;
-        heighestColIndex = j;
-      }
-    });
-    cols[heighestColIndex].innerHTML += result.Html;
-  });
+  data = storage[n];
+  displayOffers(data?.Results || [], data?.Results ? false : true);
 }
 
 function initSelectTab() {
